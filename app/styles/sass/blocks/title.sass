@@ -1,0 +1,34 @@
+.title
+  margin: 0
+
+  &_h1
+    @include adaptiv('font-size', 36, 18, 0)
+    @include adaptiv('line-height', 36, 18, 0)
+
+    @include xs
+      font-size: rem(24)
+      line-height: rem(32)
+
+  &_h2
+    margin-bottom: rem(15)
+
+    @include adaptiv('font-size', 32, 21, 0)
+    @include adaptiv('line-height', 32, 24, 0)
+
+    
+
+  &_h3
+    font-size: rem(20)
+    line-height: rem(24)
+    margin-bottom: rem(15)
+
+  &_white
+    color: white
+
+.subtitle
+  color: $gray
+  @include adaptiv('font-size', 18, 16, 0)
+  margin-bottom: rem(10)
+  
+  &:last-child
+    margin-bottom: 0

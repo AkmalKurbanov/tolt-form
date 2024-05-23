@@ -1,0 +1,131 @@
+.callback
+  height: 100%
+  @include aistr
+  width: 100%
+  background: $dark
+
+  @include sm
+    flex-direction: column
+
+  &__col
+    .gradient-top,
+    .gradient-bottom
+      z-index: 1
+
+    &:first-child
+      @include aic-jfcfe
+      width: 50%
+      position: relative
+      @include adaptiv('padding-left', 80, 15, 0)
+      @include adaptiv('padding-right', 80, 15, 0)
+      background: white
+      overflow: hidden
+
+      @include sm
+        width: 100%
+        justify-content: flex-start
+        align-items: flex-start
+        padding-top: rem(25)
+        padding-bottom: rem(70)
+
+    &:nth-child(2)
+      @include aic
+      width: 50%
+      @include adaptiv('padding-left', 80, 15, 0)
+      @include adaptiv('padding-right', 80, 15, 0)
+
+      @include sm
+        width: 100%
+        padding-top: rem(40)
+        padding-bottom: rem(80)
+        justify-content: center
+
+    .btn
+      @include sm
+        width: 100%
+
+
+
+  &__text
+    width: 100%
+    max-width: rem(410)    
+    position: relative
+    z-index: 2
+
+    .subtitle
+      line-height: rem(22)
+
+  &__list
+    margin-left: rem(-8)
+    margin-right: rem(-8)
+    max-width: rem(400)
+    @include fww
+
+    @include sm
+      max-width: 100%
+
+  &__list-col
+    width: 50%
+    padding: rem(8)   
+
+  &__item
+    background: #292956
+    border: rem(1) solid #2E2E60
+    border-radius: rem(4)
+    padding: rem(14)
+    color: white
+    @include aic
+    cursor: pointer
+    transition: $transition
+    text-decoration: none
+
+    &:hover
+      border-color: $accent
+
+    &.disabled
+      pointer-events: none
+      opacity: 0.5
+      
+  &__item-icon
+    max-width: rem(32)
+    min-width: rem(32)
+    height: rem(32)
+    margin-right: rem(14)
+
+    svg
+      width: 100%
+      height: 100%
+
+  &__form
+    max-width: rem(360)
+    width: 100%
+
+  &__icon 
+    max-width: rem(40)
+    min-width: rem(40)
+    height: rem(40)
+    @include aic-jcc
+    margin: auto
+    margin-bottom: rem(40)
+
+    svg
+      width: 100%
+      height: 100%
+
+
+  .back-btn
+    font-size: rem(14)
+    color: #25D366
+    margin: rem(15) 0
+    display: inline-block
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
+
+  .dev
+    display: none
+    @include sm
+      display: flex
+      position: absolute
+      bottom: rem(40)      

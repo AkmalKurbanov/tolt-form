@@ -1,3 +1,30 @@
 .header
-  
-	
+  &__inner
+    @include aic
+    p
+      @include adaptiv('font-size', 14, 12, 0)
+
+      @include xs
+        font-size: rem(14)
+
+  &__logo
+    @include adaptiv('margin-right', 30, 20, 0)
+    @include adaptiv('max-width', 150, 120, 0)
+    @include adaptiv('min-width', 150, 120, 0)
+    width: 100%
+    @include aic-jcc
+
+    @include xs
+      max-width: rem(150)
+      min-width: rem(150)
+      margin-right: rem(24)
+
+    img
+      width: 100%
+
+  &_bordered
+    border-bottom: rem(1) solid #485867
+    padding: rem(20) 0
+    
+    @include xs
+      padding: rem(15.5) 0

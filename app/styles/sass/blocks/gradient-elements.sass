@@ -1,0 +1,25 @@
+.gradient-top
+  position: absolute
+  top: 0
+  right: 0
+  background-image: url('../images/dist/gradient-top.webp')
+  @include adaptiv('width', 610, 500, 0)
+  @include adaptiv('height', 490, 300, 0)
+  // width: rem(610)
+  // height: rem(490)
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: top right
+  z-index: -1
+  pointer-events: none
+  
+.gradient-bottom
+  bottom: 0
+  left: 0
+  position: absolute
+  width: rem(200)
+  height: rem(150)
+  filter: blur(80px)
+  transform: matrix(-1, 0, 0, 1, 0, 0)
+  z-index: -1
+  background: linear-gradient(180deg, #FF6B00 0%, #FFFFFF 100%)

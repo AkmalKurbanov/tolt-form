@@ -1,0 +1,67 @@
+.form-wrap
+  margin-bottom: rem(30)
+  padding-right: rem(10)
+  overflow-y: auto
+  overflow-x: hidden
+  box-sizing: border-box
+
+  @include sm
+    padding-bottom: rem(100)
+    height: auto !important
+
+
+  &::-webkit-scrollbar
+    width: rem(7) /* Ширина вертикальной полосы прокрутки */
+    height: rem(7) /* Высота горизонтальной полосы прокрутки */
+
+  &::-webkit-scrollbar-track
+    background: transparent /* Цвет фона полосы прокрутки */
+
+  &::-webkit-scrollbar-thumb
+    background: $accent /* Цвет ползунка полосы прокрутки */
+    border-radius: rem(3) /* Радиус скругления углов ползунка */
+
+  &::-webkit-scrollbar-thumb:hover
+    background:  rgba($accent, .7) /* Цвет ползунка при наведении */
+
+.form
+  margin-left: rem(-8)
+  margin-right: rem(-8)
+  display: flex
+  flex-wrap: wrap
+
+  .label
+    background: white
+    border-radius: rem(5)
+    border: rem(1) solid #EDEDED
+    padding: rem(16)
+    min-height: rem(52)
+    max-height: rem(76)
+    height: 100%
+
+    @include adaptiv('padding', 16, 10, 0)
+    @include adaptiv('font-size', 16, 13, 0)
+
+    p
+      display: block
+
+      span
+        display: block
+        color: #485867
+        margin-top: rem(5)
+
+  &__col
+    &_half
+      width: 50%
+      padding: rem(8)
+
+      @include md
+        width: 100%
+
+    &_full
+      width: 100%
+      margin-bottom: rem(16)
+      padding: 0 rem(8)
+
+      &:last-child
+        margin-bottom: 0

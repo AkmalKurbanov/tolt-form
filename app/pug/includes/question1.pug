@@ -1,0 +1,91 @@
+.question__item
+      
+  .question__col
+    .gradient-top
+    .gradient-bottom
+    
+    .wrapper
+      
+      .content
+        include ../includes/header-inner
+
+        .container
+          .question__top
+            h2.title.title_h2(data-aos="fade-left" data-aos-delay='100') Какая форма компании вас интересует?
+            .text-message-mobile 
+              .text-message-mobile__container
+                .text-message-mobile__col
+                  .text-message-mobile__img 
+                    img(src="images/dist/consultant.webp", alt="")
+                  .text-message-mobile__info 
+                    .text-message-mobile__name
+                      p Темир
+                      span Консультант
+                    .text-message-mobile__text
+                      .text-message-mobile__content Оказываем юридические услуги в Кыргызстане для малого и среднего бизнеса, а также для индивидуальных предпринимателей. Наши специалисты разбираются во всех тонкостях законодательства Кыргызстана.
+                .text-message-mobile__col 
+                  .icon
+                    svg
+                      use(xlink:href='sprite.svg#angle-down')
+          
+          .form-wrap
+            .form
+              mixin item(id,val,additional,delay)
+                .form__col.form__col_half(data-aos="zoom-in" data-aos-delay=delay)
+                  label(for=id).label.label-js
+                    input(id=id type="radio" name='question1' value=val)
+                    .label__btn
+                      .not-active.not-active_circle
+                      .active.active_circle
+                        span
+                          
+
+                    p=val
+                      if additional
+                        span=additional
+                      else         
+              
+              +item('question1-1','Индивидуальное предпринимательство (ИП)','', 200)
+              +item('question1-2','Общество с ограниченной ответственностью (ОсОО)', '', 300)
+              +item('question1-3','Открытое акционерное общество (ОАО)', '', 400)
+              +item('question1-4','Закрытое акционерное общество (ЗАО)', '', 500)
+              +item('question1-5','Фонд', '', 600)
+              +item('question1-6','Другое', '', 700)
+
+      footer.footer
+        .container
+          .footer__inner
+            .footer__col
+              .page-number Вопрос  
+                span 1
+                | из 4
+
+            .footer__col
+              .footer__nav 
+                .btn.btn_small.btn_gray.btn_bordered.to-strat-js
+                  .icon
+                    svg
+                      use(xlink:href='sprite.svg#arrow-left')
+
+                .btn.btn_small.btn_accent.disabled.disabled-js 
+                  span Далее
+                  
+                  .icon
+                    svg
+                      use(xlink:href='sprite.svg#arrow-right') 
+  
+  .question__col
+    .wrapper
+      .content
+        .consultant
+          .consultant__img-wrap
+            .consultant__img
+              img(src="images/dist/consultant.webp", alt="consultant")
+            .consultant__status.consultant__status_online
+          div
+            .consultant__name Темир
+            .consultant__position Консультант
+      
+        .text-message Оказываем юридические услуги в Кыргызстане для малого и среднего бизнеса, а также для индивидуальных предпринимателей. Наши специалисты разбираются во всех тонкостях законодательства Кыргызстана.
+      
+      include ../includes/dev

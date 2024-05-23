@@ -1,0 +1,48 @@
+.consultant
+  @include aic
+  margin-bottom: rem(19)
+
+  &__img-wrap
+    margin-right: rem(16)
+    position: relative
+
+  &__img
+    max-width: rem(70)
+    min-width: rem(70)
+    height: rem(70)
+    border-radius: 100%
+    overflow: hidden
+    
+    img
+      width: 100%
+
+  &__status
+    position: absolute
+    width: rem(12)
+    height: rem(12)
+    border: 2px solid #1E1E3E
+    box-shadow: 0px 1px 3px #2E2E60
+    border-radius: 100%
+    bottom: rem(4)
+    right: rem(4)
+
+    &_online
+      background: #1BB157
+
+    &_offline
+      background: red
+
+  &__name
+    color: white
+
+  &__position
+    color: #BBBCBF    
+    font-size: rem(12)
+
+.text-message
+  background: $accent
+  color: white
+  font-size: rem(13)
+  line-height: rem(20)
+  border-radius: rem(8)
+  padding: rem(4) rem(10)

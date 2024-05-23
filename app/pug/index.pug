@@ -9,17 +9,46 @@ block vars
   - var ogimg = '';
 
 block title
-  | main
+  | TOLT
 block main
-  .wrapper
-    .content
-        include includes/header
+  
+  include includes/main
+  
+  
+  form(action="telegram.php" method="POST").question
 
-        
-         
-     
+    include includes/question1
 
-    include includes/footer
+    include includes/question2
+    
+    include includes/question3
+    
+    include includes/question4
+    
+    include includes/messenger-list
+    
+    include includes/whatsapp
 
-
+    include includes/telegram
+    
+    include includes/viber
+    
+    include includes/phone
+    
+    
+    
   include includes/scripts 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

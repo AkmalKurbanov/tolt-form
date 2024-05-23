@@ -1,0 +1,136 @@
+.main
+  @include aistr-jfcsb
+  min-height: 100%
+  z-index: 2
+  position: relative
+
+  @include xs
+    flex-direction: column
+    justify-content: flex-start
+
+  &__col
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+
+    .container
+
+      @include adaptiv('padding-left', 40, 10, 0)
+      @include adaptiv('padding-right', 40, 10, 0)
+
+      @include xs
+        padding: 0 rem(25)
+
+    &:first-child
+      width: 60%
+      overflow: hidden
+      position: relative
+      min-height: rem(220)
+      transition: all 1.5s
+
+      @include lg
+        width: 50%
+
+      @include xs
+        width: 100%
+
+      &::after
+        position: absolute
+        content: ''
+        width: 100%
+        height: 100%
+        background: #EDEDED
+        transition: all 1.5s
+        left: 100%
+        z-index: 1
+
+        @include xs
+          display: none
+
+    &:last-child
+      width: 40%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
+      @include lg
+        width: 50%
+
+      @include xs
+        width: 100%
+        padding-bottom: rem(65)
+
+  &__hero
+    @include aic
+    padding: rem(20) 0
+
+    @include xs
+      align-items: flex-start
+      padding-top: rem(60)
+      height: auto !important
+
+    .title
+      margin-bottom: rem(16)
+      transition: $transition
+    .subtitle
+      margin-bottom: rem(24)
+      transition-delay: .5s
+      transition: $transition
+
+    .is-blicked
+      transition-delay: 1s
+
+    .btn
+      @include xs
+        display: flex
+
+  .header,
+  .footer,
+  .main__hero
+    transition: all 1.5s
+
+  .footer
+    @include xs
+      position: fixed
+      bottom: 0
+      left: 0
+      right: 0
+      width: 100%
+
+    &__inner
+      @include xs
+        flex-direction: column
+
+    &__col
+      &:first-child
+        @include xs
+          margin-bottom: rem(10)
+          
+      @include xs
+        width: 100%
+        text-align: center
+
+  &.start
+    .main__col
+      &:first-child
+
+        @include xs
+          transform: translateY(-60px)
+          opacity: 0
+
+        &:after
+          left: 0
+
+    .header
+      transform: translateY(-100%)
+      opacity: 0
+
+    .footer
+      transform: translateY(100%)
+      opacity: 0
+
+  &.hide
+    opacity: 0
+    position: absolute
+    pointer-events: none
+    z-index: -999

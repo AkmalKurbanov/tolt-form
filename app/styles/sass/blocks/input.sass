@@ -1,0 +1,67 @@
+.input-wrap
+  position: relative
+  
+  .label
+    text-transform: uppercase
+    color: #BBBCBF
+    letter-spacing: rem(1.2)
+    margin-bottom: rem(10)
+
+  .input
+    background: #292956
+    border: rem(1) solid #2E2E60
+    border-radius: rem(4)
+    width: 100%
+    min-height: rem(60)
+    max-height: rem(60)
+    position: relative
+
+    input
+      width: 100%
+      min-height: 100%
+      padding: 0 rem(20) 
+      background: none
+      border: none
+      color: white
+
+      @include placeholder
+        color: #BBBCBF
+
+    .h100p  
+      min-height: rem(60)
+      max-height: rem(60)
+
+
+    &_phone
+      @include aistr
+
+    &.success
+      .output-success
+        opacity: 1
+        pointer-events: inherit
+
+    &.error
+      .output-error
+        opacity: 1
+        pointer-events: inherit
+
+    .output-success,
+    .output-error
+      position: absolute
+      top: 100%
+      color: white
+      padding: rem(8)
+      border-radius: rem(5)
+      border: rem(1) solid white
+      font-size: rem(14)
+      opacity: 0
+      transition: $transition
+      pointer-events: none
+
+    .output-success
+      background: green
+
+    .output-error
+      background: red
+
+

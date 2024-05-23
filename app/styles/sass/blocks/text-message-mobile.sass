@@ -1,0 +1,82 @@
+.text-message-mobile
+  background: $dark
+  border-radius: rem(20) rem(20) rem(3) rem(20)
+  padding: rem(10)
+  margin-top: rem(16)
+  display: none
+
+  @include sm
+    display: block
+
+  &__container
+    @include jfcsb
+
+  &__col
+    &:first-child
+      display: flex
+
+    .icon
+      transition: $transition
+
+      svg
+        fill: white
+    
+    &:last-child
+      min-width: rem(18)
+      
+
+  &__img
+    max-width: rem(40)
+    min-width: rem(40)
+    height: rem(40)
+    border-radius: 100%
+    overflow: hidden
+    margin-right: rem(10)
+    position: relative
+
+    img
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      object-fit: cover
+      object-position: center
+
+
+  &__name
+    @include aic
+    margin-bottom: rem(5)
+
+    p
+      color: white
+      margin-right: rem(20)
+
+    span
+      font-size: rem(12)
+      color: rgba(white, .7)
+      position: relative
+      display: block
+      padding-left: rem(12)
+
+      &::before
+        position: absolute
+        content: ''
+        width: rem(6)
+        height: rem(6)
+        border-radius: 100%
+        background: #11983F
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+
+  &__text
+    font-size: rem(12)
+    color: white
+    line-height: rem(18)
+
+  &.open
+    .icon
+      transform: rotate(180deg)

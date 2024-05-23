@@ -1,0 +1,108 @@
+.label
+  @include aic
+  cursor: pointer
+  transition: $transition
+
+  &__btn
+    margin-right: rem(16)
+    max-width: rem(20)
+    min-width: rem(20)
+    height: rem(20)
+    @include aic-jcc
+    position: relative
+
+    .not-active
+      background: #EDEDED
+      width: 100%
+      height: 100%
+
+      &_circle
+        border-radius: 100%
+        overflow: hidden
+        @include aic-jcc
+
+      &_square
+        border-radius: rem(5)
+        @include aic-jcc
+
+    .active
+      background: $accent
+      opacity: 0
+      pointer-events: none
+      width: 100%
+      height: 100%
+      position: absolute
+      transition: $transition
+
+      &_circle
+        border-radius: 100%
+        overflow: hidden
+        @include aic-jcc
+
+        span
+          max-width: rem(16)
+          min-width: rem(16)
+          height: rem(16)
+          border-radius: 100%
+          border: rem(2) solid white
+          display: block
+
+      &_square
+        border-radius: rem(5)
+        @include aic-jcc
+
+        span 
+          width: 100%
+          height: 100%
+          @include aic-jcc
+
+        .icon
+          max-width: rem(16)
+          min-width: rem(16)
+          height: rem(16)
+
+          svg
+            fill: white
+
+  input
+    position: absolute
+    opacity: 0
+    
+  input:checked
+    & ~ .label__btn
+      .active
+        opacity: 1
+
+  &:hover
+    border-color: $accent!important
+
+    .label__btn
+      .active
+        opacity: 1
+
+  &.active       
+    border-color: $accent!important
+
+.additional-info
+  @include aic
+  display: inline-flex
+  background: #ECDDFF
+  border: rem(1) solid $accent
+  border-radius: rem(5)
+  padding: rem(8)
+  font-size: rem(12)
+  font-weight: 600
+  margin-top: rem(15)
+
+  .icon
+    max-width: rem(16)
+    min-width: rem(16)
+    height: rem(16)
+    margin-right: rem(8)    
+    border-radius: 100%
+    overflow: hidden
+    background: $accent
+    padding: rem(1)
+
+    svg
+      fill: white

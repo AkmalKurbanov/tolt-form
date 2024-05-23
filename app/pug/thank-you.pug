@@ -1,0 +1,49 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | TOLT
+block main
+  
+  .main
+    .main__col(style="background-image: url('images/dist/bg.webp')")
+
+    .main__col 
+      .wrapper
+        .content
+          include includes/header
+
+          .main__hero  
+            .container 
+              h1.title.title_h1 Мы получили Вашу заявку!
+              p.subtitle После прохождения процедуры регистрации мы передадим Вам полный комплект документов, необходимых для ведения деятельности.
+              p.subtitle При необходимости поможем получить лицензию или любые другие разрешительные документы в Кыргызстане.
+          
+              a(href="https://tolt.kg/").btn.btn_small.btn_accent.is-blicked Перейти на сайт 
+        
+
+        include includes/footer
+  
+
+  include includes/scripts 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

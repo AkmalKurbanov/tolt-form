@@ -1,0 +1,26 @@
+.question__item.called-js(data-name="telegram")
+  .callback
+    .callback__col
+      include ../includes/callback-text
+    .callback__col
+      .callback__form   
+        .callback__icon
+          svg(width='40' height='40' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+            g(clip-path='url(#clip0_5_2256)')
+              path(d='M16 30.7882C24.1672 30.7882 30.7881 24.1673 30.7881 16C30.7881 7.83279 24.1672 1.21191 16 1.21191C7.83273 1.21191 1.21185 7.83279 1.21185 16C1.21185 24.1673 7.83273 30.7882 16 30.7882Z' fill='white')
+              path(d='M21.3514 11.8397L11.6481 17.9657L13.2848 22.9839L13.6054 19.5316L21.9178 12.0313C22.2801 11.7065 21.8387 11.5482 21.3514 11.8397Z' fill='#00A1E6')
+              path(d='M16 0C7.16294 0 0 7.16293 0 16C0 24.8371 7.16294 32 16 32C24.8371 32 32 24.8371 32 16C32 7.16293 24.8371 0 16 0ZM25.3951 10.2447L22.455 24.0999C22.2509 25.0828 21.6512 25.3201 20.8267 24.8621L16.3457 21.5513C15.292 22.5716 14.3467 23.4919 14.1926 23.6419C13.9427 23.8876 13.7428 24.0916 13.2972 24.0916C12.7142 24.0916 12.8183 23.8709 12.6143 23.3212L10.9651 18.2738L6.65487 16.9287C5.69703 16.6372 5.6887 15.9792 6.86726 15.5044L24.1333 8.84539C24.937 8.49141 25.6949 9.04112 25.3951 10.2447Z' fill='#00A1E6')
+            defs
+              clippath#clip0_5_2256
+                rect(width='40' height='40' fill='white')
+
+        .input-wrap
+          label.label(for="login") Логин Telegram или Телефон
+          .input
+            input#login.h100p.input-tg-js(type="text" placeholder="login" name='telegram' )
+
+        .back-btn.trigger-js.re-election-js(data-name="messenger-list") Выбрать другой мессенджер
+        br
+        button(type="submit").btn.btn_accent.btn_small.disabled Отправить 
+
+    include ../includes/dev
