@@ -95,5 +95,3 @@ if (!empty($txt)) {
 
 
 
-
-telegrambotphp
